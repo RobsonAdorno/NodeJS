@@ -1,8 +1,14 @@
 export class UserModel {
-    private _id:string
+    private _id?:string
     private _name:string
     private _login:string
     private _password:string
+
+    constructor(name?:string, login?:string, password?:string) {
+        this._name = name!
+        this._login = login!
+        this._password = password!
+    }
 
     public getId() {
         return this._id
